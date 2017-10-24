@@ -160,7 +160,7 @@ nav .top-nav-btn a {
   font-weight: 400;
   font-size: 1.2rem;
   margin: 0;
-    transform: skewX(4deg);
+  /*transform: skewX(4deg);*/
 }
 
 .testimonials-quote p {
@@ -168,7 +168,7 @@ nav .top-nav-btn a {
   color: #fff;
   font-size: 1rem;
   font-weight: 300;
-    transform: skewX(4deg);
+  /*transform: skewX(4deg);*/
 }
 
 .testimonials-left {
