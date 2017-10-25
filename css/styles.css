@@ -1,6 +1,7 @@
 /* STYLES.CSS */
 Body {
   font-family: 'Roboto', 'Arial', sans-serif;
+  background-color: #fff;
 }
 
 h1 {
@@ -9,7 +10,19 @@ h1 {
   margin: 0;
 }
 
+h1.alt {
+  font-family: 'Roboto', sans-serif;
+  font-size: 3.5rem;
+  margin: 0;
+}
+
 h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 3rem;
+  margin: 0;
+}
+
+h2.alt {
   font-family: 'Roboto Slab', serif;
   font-size: 3rem;
   margin: 0;
@@ -19,6 +32,30 @@ h3 {
   font-family: 'Roboto', Arial, sans-serif;
   font-size: 1.5rem;
   margin: 0;
+}
+
+h4 {
+  font-family: 'Roboto', Arial, sans-serif;
+  margin: 0;
+}
+
+h5 {
+  font-family: 'Roboto', Arial, sans-serif;
+  margin: 0;
+}
+
+p {
+  font-family: 'Roboto', Arial, sans-serif;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* MODIFIERS*/
+.slab {
+  font-family: 'Roboto Slab', serif !important;
 }
 
 /* HERO CELL */
@@ -95,7 +132,7 @@ nav .top-nav-btn a {
 #feature-cell div:first-child, #feature-cell div:nth-child(3) {
   background-repeat: no-repeat;
   background-color: #fff;
-  padding: 150px 60px 150px 0;
+  padding: 110px 60px 120px 0;
 }
 
 #feature-cell div:first-child {
@@ -127,12 +164,6 @@ nav .top-nav-btn a {
 
 /* TESTIMONIALS*/
 
-#testimonials-cell {
-    width: 102%;
-    position: relative;
-    right: 10px;
-}
-
 #testimonials-cell p:first-child {
   text-align: center;
   background-color: #000;
@@ -144,22 +175,22 @@ nav .top-nav-btn a {
 .testimonials-meet {
   display: inline-flex;
   justify-content: space-between;
-  align-items: baseline;
-  height: 400px;
+  height: 450px;
   padding: 0;
   margin: 0;
 }
 
 .testimonials-quote {
-  padding: 20px 40px;
+  padding: 15px 40px 25px;
   height: 90px;
-  margin-top: 270px;
+  margin-top: 320px;
 }
 
 .testimonials-quote h4 {
   font-weight: 400;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   margin: 0;
+  padding-bottom: 10px;
   /*transform: skewX(4deg);*/
 }
 
@@ -176,12 +207,23 @@ nav .top-nav-btn a {
   background-position-x: right;
   background-size:cover;
   background-repeat: no-repeat;
-  height:400px;
+  height:450px;
   margin-right: 0;
   width: 50%;
-  margin-right: 5px;
   /*transform: skewX(-4deg);
   transform-origin: top;*/
+}
+
+.testimonials-spacer {
+  height:auto;
+  width: 30px;
+  position: absolute;
+  right: 50%;
+  z-index: 1;
+  height: 450px;
+  background-color: #fff;
+    transform: skewX(-4deg);
+    margin: 0 -12px;
 }
 
 .testimonials-right {
@@ -189,11 +231,8 @@ nav .top-nav-btn a {
   background-position: right;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 400px;
+  height: 450px;
   width: 50%;
-  margin-left: 5px;
-  /*transform: skewX(-4deg);
-  transform-origin: bottom;*/
 }
 
 .testimonials-quote {
@@ -205,9 +244,134 @@ nav .top-nav-btn a {
   color: #fff;
 }
 
+#pricing-cell h4 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 0;
+  padding: 30px 0 20px;
+  text-align: center;
+}
 
+#pricing-cell h5 {
+  font-size: 1rem;
+  font-weight: 400;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 30px;
+}
 
+#pricing-cell p {
+  font-size: .9rem;
+  text-align: center;
+  padding: 15px 20px 35px;
+}
 
+.pricing-plans {
+  display: block;
+  text-align: center;
+}
+
+.plan-casual, .plan-pro, .plan-business {
+  width: 330px;
+  margin: 0 2%;
+  border: 1px solid #cdcdcd;
+  display: inline-block;
+  vertical-align: top;
+  box-shadow: 4px 4px 7px #cdcdcd;
+}
+
+.plan-casual, .plan-business {
+  height: 420px;
+  margin-top: 30px;
+}
+
+.plan-pro {
+  height: 475px;
+}
+
+#pricing-cell .pricing-plans h4 {
+  background-color: #3d3d3d;
+  color: #fff;
+  padding: 5px 0;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+}
+
+#pricing-cell .pricing-plans h2 {
+  color: #272727;
+  padding: 20px 0 10px;
+  text-align: center;
+  font-size: 3.5rem;
+}
+
+#pricing-cell .plan-casual h2 {
+  font-size: 3rem;
+}
+
+#pricing-cell ul li {
+  list-style: none;
+  padding: 20px 0;
+  text-align: center;
+}
+
+#pricing-cell .plan-business ul li {
+  padding: 13px 0;
+}
+
+#pricing-cell button {
+  background-color: #00cc99;
+  border: none;
+  padding: 10px 20px;
+  margin: 20px 0;
+}
+
+#pricing-cell button a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.pricing-cta {
+  text-align: center;
+}
+
+.plan-casual .pricing-cta {
+  padding-top: 12px;
+}
+
+footer {
+  width: 100%;
+  background-color: #3d3d3d;
+  text-align: center;
+  height: 80px;
+}
+
+footer .footer-logo, footer .footer-main {
+vertical-align: top;
+padding: 20px 20px 10px;
+}
+
+.footer-logo {
+  position: absolute;
+}
+
+footer p {
+  color: #00cc99;
+  font-weight: 700;
+}
+
+.footer-main a {
+  color: #fff;
+  font-weight: 400;
+}
+
+.copyright p {
+  font-weight: 400;
+  font-size: .8rem;
+}
 
 
 
@@ -233,7 +397,7 @@ nav .top-nav-btn a {
  @media (min-width: 1200px) {
    .container {
      width: 100%;
-     background-color: #eee;
+     background-color: #fff;
    }
 
    /* HOMEPAGE */
