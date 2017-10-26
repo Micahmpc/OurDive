@@ -564,7 +564,7 @@ footer p {
   }
 
   .testimonials-quote {
-    padding: 25px;
+    padding: 25px; 
     position: relative !important;
     top: 250px;
   }
