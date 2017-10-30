@@ -425,6 +425,7 @@ footer p {
   float: left;
   padding-bottom: 100%;
   height: 100%;
+  position: fixed;
 }
 
 #side-nav .header-logo {
@@ -455,8 +456,13 @@ footer p {
 }
 
 #side-nav ul li{
-  padding: 3px 0;
+  padding: 3px 5px 3px 0;
   list-style: none;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #999;
+
 }
 
 #side-nav ul li a {
@@ -468,7 +474,7 @@ footer p {
   justify-content: space-between;
   align-items: flex-end;
   background-color: #4a4a4a;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   width: inherit;
@@ -629,7 +635,7 @@ padding-right: 5px;
 
 #dash-content .content-cell .content-link {
   width: 250px;
-  height: 250px
+  height: 250px;
   display: inline-block;
   vertical-align: top;
 }
@@ -711,6 +717,33 @@ padding-right: 5px;
   #pricing-cell .plan-business ul li {
     padding: 10px 0;
   }
+
+  /*****************DASHBOARD****************/
+  #side-nav img.header-logo {
+    height: 25px;
+  }
+
+  .drives li a {
+    font-size: .8rem;
+  }
+
+  #side-nav .drives h5 {
+    font-size: 1rem;
+  }
+
+  #dash-content .content-main .content-cell {
+    width: 200px;
+    height: 200px;
+  }
+
+  #dash-content .content-main .content-cell, #dash-content .content-main .content-img, #dash-content .content-main .content-link, #dash-content .content-main .content-note {
+    width: 200px;
+    height: 200px;
+  }
+
+  #dash-content .content-cell .content-link h4 {
+    max-width: 65%;
+  }
 }
 
 @media (max-width: 992px) {
@@ -758,6 +791,67 @@ padding-right: 5px;
 
   #pricing-cell {
     display: block;
+  }
+
+  /*****************DASHBOARD****************/
+  #side-nav img.header-logo {
+    height: 15px;
+  }
+
+  .drives li a {
+    font-size: .8rem;
+  }
+
+  #side-nav .drives h5 {
+    font-size: .9rem;
+  }
+
+  #side-nav .user-menu-toggle img {
+    height: 25px;
+  }
+
+  #side-nav .user-menu-toggle a {
+    font-size: .7rem;
+  }
+
+  #side-nav .user-menu-toggle i{
+    font-size: .8rem;
+    padding-left: 5px;
+  }
+
+  #dash-content .add-dropdown .dropdown-content a {
+    font-size: .8rem;
+  }
+
+  #dash-content .content-main .content-cell {
+    width: 125px;
+    height: 125px;
+    margin: 10px 0 0 10px;
+  }
+
+  #dash-content .content-main .content-cell, #dash-content .content-main .content-img, #dash-content .content-main .content-link, #dash-content .content-main .content-note {
+    width: 125px;
+    height: 125px;
+  }
+
+  #dash-content .content-cell .content-link h4 {
+    max-width: 70%;
+    font-size: .8rem;
+    padding-top: 10px;
+  }
+
+  #dash-content .content-cell .content-link h6 {
+    font-size: .6rem;
+    padding: 5px;
+  }
+
+  #dash-content .content-cell .content-link img {
+    padding: 5px 5px 0 5px;
+  }
+
+  #dash-content .content-cell .content-note h4 {
+    font-size: .8rem;
+    padding: 5px;
   }
 
 }
