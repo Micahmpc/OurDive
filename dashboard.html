@@ -9,11 +9,15 @@
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" href="css/dropit.css">
   </head>
 <body>
 
   <div class="container">
-    <div id="side-nav">
+    <!-- RESPONSIVE NAV -->
+    <a href="#" class="hamburger" id="menu">&#9776;</a>
+    <!-- SIDE NAV -->
+    <div id="side-nav" class="side-nav">
       <img class="header-logo" src="images/ourdrive_logo_neg.png" alt="OurDrive">
       <div class="drives">
         <h5>Drives</h5>
@@ -40,12 +44,16 @@
           </button>
         </div>
         <div class="add-dropdown">
-          <button type="button" name="add"><i class="fa fa-plus" aria-hidden="true"></i> Add</button>
-          <div class="dropdown-content">
-            <a href="#"><i class="fa fa-file-o" aria-hidden="true"></i>Note</a>
-            <a href="#"><i class="fa fa-picture-o" aria-hidden="true"></i>Image</a>
-            <a href="#"><i class="fa fa-link" aria-hidden="true"></i>Link</a>
-          </div>
+          <ul class="menu">
+            <li>
+              <a href="#" class="btn">+ Add</a>
+              <ul>
+                  <li><a href="#"><i class="fa fa-file-o"></i> Note</a></li>
+                  <li><a href="#"><i class="fa fa-picture-o"></i> Image</a></li>
+                  <li><a href="#"><i class="fa fa-link"></i> Link</a></li>
+              </ul>
+            </li>
+          </ul>
         </div>
       </div>
       <div class="content-sort">
@@ -139,6 +147,13 @@
   </div>
 
 
-
+  <script src="js/jquery-3.2.1.min.js"></script>
+   <script src="js/dropit.js"></script>
+   <script type="text/javascript">
+     $(".menu").dropit();
+     $( "#menu" ).click(function(){
+       $("#side-nav").toggleClass("open", 200);
+     });
+   </script>
 </body>
 </html>

@@ -506,6 +506,10 @@ footer p {
   top: 1px;
 }
 
+.hamburger {
+  display: none;
+}
+
 #dash-content {
   margin-left: 16.66667%;
 }
@@ -643,7 +647,7 @@ padding-right: 5px;
 #dash-content .content-cell .content-link img {
   width: 16px;
   display: inline;
-  padding: 15px 15px 0 15px;
+  padding: 15px 5px 0 15px;
 }
 
 #dash-content .content-cell .content-link h4 {
@@ -846,7 +850,7 @@ padding-right: 5px;
   }
 
   #dash-content .content-cell .content-link img {
-    padding: 5px 5px 0 5px;
+    padding: 5px 2px 0 5px;
   }
 
   #dash-content .content-cell .content-note h4 {
@@ -976,5 +980,98 @@ padding-right: 5px;
   .copyright p {
     font-size: .7rem;
   }
+
+  /******** DASHBOARD **************/
+
+  #side-nav {
+    display: none;
+    height: 100%;
+    width: 280px;
+    color: #00cc99;
+    background-color: #3d3d3d;
+    position: absolute;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    transform: translate(-280px,0);
+    -webkit-transform: translate(-280px,0); /** Chrome & Safari **/
+    -o-transform: translate(-280px,0); /** Opera **/
+    -moz-transform: translate(-280px,0); /** Firefox **/
+  }
+
+  #side-nav .open {
+    display: block;
+    width:280px;
+    background: #3d3d3d;
+    background-color: #3d3d3d;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    transform: translate(0,0);
+    -webkit-transform: translate(0,0); /** Chrome & Safari **/
+    -o-transform: translate(0,0); /** Opera **/
+    -moz-transform: translate(0,0); /** Firefox **/
+    z-index: 10000;
+  }
+
+  .hamburger {
+    display: block;
+    position:absolute;
+    z-index: 1000;
+    background:#3d3d3d;
+    color:#00cc99;
+    text-decoration: none;
+    font-size: 1rem;;
+    padding: 10px 14px 8px 14px;
+    margin: 10px 0 0 10px;
+  }
+
+  #dash-content {
+    margin-left: 0;
+    position: relative;
+    top: 45px;
+  }
+
+  #dash-content .dash-search-add {
+    padding: 10px 10px;
+  }
+
+  #dash-content .dash-search-add input {
+    width: 70%;
+  }
+
+  #dash-content .dash-search {
+    max-width: 70%;
+    margin: 0;
+  }
+
+  #dash-content .add-dropdown {
+    width: 22%;
+  }
+
+  #dash-content .content-sort {
+    padding: 10px;
+  }
+
+  #dash-content .content-main {
+    padding:0;
+    text-align: center;
+  }
+
+  #dash-content .content-main .content-cell {
+    width:45%;
+    height: 150px;
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: left;
+  }
+
+#dash-content .content-main .content-img, #dash-content .content-main .content-note, #dash-content .content-main .content-link {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
 
  }
