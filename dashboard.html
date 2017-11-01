@@ -30,9 +30,16 @@
           <li><a href="#"><i class="fa fa-plus" aria-hidden="true"></i> New Drive</a></li>
         </ul>
       </div>
-      <div class="user-menu-toggle">
+      <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">
           <img src="images/female-44.jpg" alt="">
-          <p><a href="#">Jenni C. <i class="fa fa-cog" aria-hidden="true"></i></a></p>
+          <p class="user-popup">Jenni C. <i class="fa fa-cog" aria-hidden="true"></i></p>
+        </button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="#home"><i class="fa fa-cog"></i> Account</a>
+          <a href="#about"><i class="fa fa-users" style="padding-right:8px;"></i> Collaborators</a>
+          <a href="#contact"><i class="fa fa-sign-out"></i> Sign Out</a>
+        </div>
       </div>
     </div>
     <div id="dash-content">
@@ -155,5 +162,28 @@
        $("#side-nav").toggleClass("open", 200);
      });
    </script>
+   <script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
 </body>
 </html>
